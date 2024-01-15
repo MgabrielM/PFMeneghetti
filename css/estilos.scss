@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Permanent+Marker&display=swap');
+
+@import "partial/_generales.scss";
+
+.index-encabezado{
+    width: 100%;
+    height: auto;
+    color: white; 
+
+    .encabezado-contenedor{
+        width: 100%;
+        height: auto;
+        padding: 20px 5% 20px 5%;
+        background-color: #171D1C;
+        display: flex;
+        justify-content: space-around;
+        align-items: first baseline;
+        
+        a{color: white;}
+
+        .menu{
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        .menu-lista{
+            display: flex;
+            justify-content: space-around;
+            align-items: first center;
+            gap: 20px;
+        }
+
+        li{
+            list-style-type: none;
+        }
+    }   
+}
+
+.seccion-carrousel{
+    width: 100vw;
+    height: 40vh;
+
+    img{
+        width: 100vw;
+        height: 50vh;
+        object-fit: cover;
+        opacity: 0.9;
+     }
+}
+
+
+
+
+
+
+
+
+
+

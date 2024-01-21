@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Permanent Marker", cursive;
 }
 
 body {
-  background-color: #171D1C;
+  background-color: #050609;
 }
 
 h1 {
@@ -23,27 +24,25 @@ a {
   color: black;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 h1 {
-  font-size: 2.75rem;
+  font-size: 1.25rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 h3 {
-  font-size: 3.25rem;
+  font-size: 0.75rem;
+}
+
+body {
+  font-family: "Lemon", serif;
 }
 
 .index-encabezado {
   width: 100%;
-  height: auto;
+  height: 100px;
   color: white;
   display: flex;
   justify-content: center;
@@ -53,47 +52,74 @@ h3 {
   width: 100%;
   height: auto;
   padding: 20px 5% 20px 5%;
-  background-color: #171D1C;
+  background-color: #050609;
   display: flex;
   justify-content: space-around;
   align-items: self-start;
 }
+.index-encabezado .encabezado-contenedor .marca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index-encabezado .encabezado-contenedor .marca img {
+  width: 80px;
+  height: 80px;
+}
+.index-encabezado .encabezado-contenedor h1 {
+  padding-top: 15px;
+}
+.index-encabezado .encabezado-contenedor h1 > a {
+  font-size: 2.5rem;
+}
+.index-encabezado .encabezado-contenedor h1 > a .subtitulo {
+  font-size: 1.5rem;
+  color: red;
+}
 .index-encabezado .encabezado-contenedor a {
   color: white;
+  font-size: 1.25rem;
 }
 .index-encabezado .encabezado-contenedor a:hover {
   color: gold;
 }
 .index-encabezado .encabezado-contenedor .menu {
   display: flex;
+  padding-top: 15px;
   justify-content: center;
+  align-items: center;
 }
 .index-encabezado .encabezado-contenedor .menu-lista {
   display: flex;
   justify-content: space-around;
-  align-items: first center;
-  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  gap: 60px;
+}
+.index-encabezado .encabezado-contenedor .menu-lista a {
+  font-style: italic;
 }
 .index-encabezado .encabezado-contenedor li {
   list-style-type: none;
 }
 
 .seccion-carrousel {
-  width: 100%;
+  width: 100vw;
   height: 450px;
 }
 .seccion-carrousel img {
+  margin: 0;
   width: 100vw;
   height: 450px;
-  object-fit: cover;
+  object-fit: none;
+  object-position: 50% 50%;
   opacity: 0.9;
 }
 
 .index-seccion-uno {
   width: 100%;
   height: 250px;
-  padding: 25px 5% 25px 5%;
-  background-color: cadetblue;
+  background-color: #050609;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,14 +128,14 @@ h3 {
   width: 1300px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   gap: 30px;
 }
 .index-seccion-uno .index-seccion-uno-contenedor > div {
   width: 30%;
   height: 200px;
-  background-color: rgba(58, 23, 23, 0.795);
+  background-color: #0e0d0d;
   border-radius: 5%;
   padding: 15px 10px;
   display: flex;
@@ -134,59 +160,215 @@ h3 {
 }
 
 .index-seccion-dos {
-  background-color: rgba(0, 0, 0, 0.781);
-  width: 1300px;
+  background-color: rgba(0, 0, 0, 0.288);
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15vh 25vw;
+  padding: 5vh 15vw;
 }
 .index-seccion-dos .index-seccion-dos-contenedor {
   display: flex;
-  justify-content: space-evenly;
+  width: 1300px;
+  justify-content: center;
   align-items: center;
   color: white;
 }
 .index-seccion-dos .index-seccion-dos-contenedor img {
-  width: 90%;
+  width: 50vw;
+  height: 95vh;
 }
 
 .pie {
   width: 100%;
-  height: 200px;
-  background-color: #171D1C;
-  padding: 25px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.pie li {
+  list-style-type: none;
+}
+.pie .pie-contenedor {
+  width: 900px;
+  height: 175px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas: "tiac tisuc tiredes" "ac suc redes";
+  gap: 0 80px;
+  padding: 0;
+  font-weight: 100;
+  font-size: 1rem;
+}
+.pie .pie-contenedor nav ul {
+  padding: 0px;
+}
+.pie .pie-contenedor nav ul a {
+  color: #9b9b90;
+}
+.pie .pie-contenedor nav ul a:hover {
+  color: white;
+}
+.pie .pie-contenedor .grid-titulo-acceso {
+  grid-area: tiac;
+  display: flex;
+  justify-content: start;
+  color: red;
+  border-bottom: 1px solid gold;
+}
+.pie .pie-contenedor .accesos {
+  grid-area: ac;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding-top: 15px;
+}
+.pie .pie-contenedor .grid-titulo-sucursales {
+  grid-area: tisuc;
+  display: flex;
+  justify-content: start;
+  color: #9b9b90;
+  color: red;
+  border-bottom: 1px solid gold;
+}
+.pie .pie-contenedor .sucursales {
+  grid-area: suc;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 15px;
+}
+.pie .pie-contenedor .grid-titulo-redes {
+  grid-area: tiredes;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  color: #9b9b90;
+  color: red;
+  border-bottom: 1px solid gold;
+}
+.pie .pie-contenedor .redes {
+  grid-area: redes;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 15px;
+}
+
+.contenedor-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 35px;
+}
+.contenedor-menu .menu-titulo {
+  font-size: 3rem;
+  padding: 35px 0;
+}
+.contenedor-menu .titulo-hamburguesa {
+  color: gold;
+}
+.contenedor-menu .titulo-papas {
+  color: red;
+}
+.contenedor-menu .contenedor-menu-primario {
+  width: 1300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.contenedor-menu .contenedor-menu-primario .hamburguesa {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgba(155, 155, 144, 0.0666666667);
+  padding: 40px;
+  gap: 40px;
 }
-.pie .izquierdo {
-  gap: 15px;
+.contenedor-menu .contenedor-menu-primario .hamburguesa img {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(199, 243, 5, 0.055);
+  border-radius: 35%;
 }
-.pie .izquierdo a {
-  text-decoration: none;
-}
-.pie .izquierdo a:hover {
-  color: rgba(216, 197, 197, 0.589);
-}
-.pie .izquierdo li {
-  list-style-type: none;
-}
-.pie .derecho {
+
+.seccion-sucursal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.seccion-sucursal .seccion-sucursal-titulo {
+  margin-top: 25px;
+  width: 70%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: start;
+  color: white;
+}
+.seccion-sucursal .contenedor-sucursal {
+  width: 70%;
+  height: auto;
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr 6fr;
+  grid-template-areas: "suc suctit" "suc sucdir" "suc sucmap";
+  column-gap: 30px;
+}
+.seccion-sucursal .contenedor-sucursal img {
+  width: 100%;
+  height: 100%;
+  max-width: 950px;
+  max-height: 530px;
+  display: block;
+  object-fit: fill;
+}
+.seccion-sucursal .contenedor-sucursal .sucursal-uno {
+  grid-area: suc;
+}
+.seccion-sucursal .contenedor-sucursal .sucursal-uno-titulo {
+  grid-area: suctit;
+  background-color: red;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.pie .derecho a {
-  text-decoration: none;
+.seccion-sucursal .contenedor-sucursal .sucursal-uno-direccion {
+  grid-area: sucdir;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.pie .derecho a:hover {
-  color: rgba(216, 197, 197, 0.589);
+.seccion-sucursal .contenedor-sucursal .sucursal-uno-mapa {
+  grid-area: sucmap;
+  width: 100%;
+  height: 100%;
 }
-.pie .derecho li {
-  list-style-type: none;
+
+.seccion-contacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: auto;
+}
+.seccion-contacto .contacto-contenedor {
+  width: 70vw;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

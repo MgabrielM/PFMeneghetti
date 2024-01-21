@@ -1,12 +1,12 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
-    font-family: "Permanent Marker", cursive;
+    margin: 0;   
   }
   
   body {
-    background-color: #171D1C;
+    background-color: #050609;
+     
   }
   
   h1 {
@@ -21,3 +21,7 @@
     text-decoration: none;
     color: black;
   }
+
+  h1{font-size: 1.25rem;}
+  h2{font-size: 1.00rem;}
+  h3{font-size: 0.75rem;}

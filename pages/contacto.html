@@ -4,86 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Hamburguesería - Digi Fora</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Menu - Digi Fora</title>
 </head>
 <body>
     <header class="index-encabezado">
         <div class="encabezado-contenedor">
             <div class="marca">
-              <img src="./img/logo.png" alt="">
-              <h1><a href="./index.html" class="titulo">RAC<span id="subtitulo" class="subtitulo">burgers</span></a></h1>
+              <img src="../img/logo.png" alt="">
+              <h1><a href="../index.html" class="titulo">RAC<span id="subtitulo" class="subtitulo">burgers</span></a></h1>
             </div>
             <nav class="menu">
                 <ul class="menu-lista">
-                    <li class="menu-item"><a href="./index.html">INICIO</a></li>
-                    <li class="menu-item"><a href="./pages/productos.html">PRODUCTOS</a></li>
-                    <li class="menu-item"><a href="./pages/sucursales.html">SUCURSALES</a></li>
-                    <li class="menu-item"><a href="./pages/contacto.html">CONTACTO</a></li>
+                    <li class="menu-item"><a href="../index.html">INICIO</a></li>
+                    <li class="menu-item"><a href="./productos.html">PRODUCTOS</a></li>
+                    <li class="menu-item"><a href="./sucursales.html">SUCURSALES</a></li>
+                    <li class="menu-item"><a href="./contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
-        <section class="seccion-carrousel">
-          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="3000">
-                <img src="./img/jean-claude-attipoe-EtJiql0AdwI-unsplash.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="./img/jonathan-borba-8l8Yl2ruUsg-unsplash.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="./img/raphael-maksian-IsmVrCPM5ms-unsplash.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+    <main>        
+        <section class="section-uno container">
+            <form action="#" class="container row form-contenedor-contacto">
+                <label for="#">Nombre</label>
+                <input type="text" placeholder="Ingrese su nombre">
+                <label for="#">Apellido</label>
+                <input type="text" placeholder="Ingrese su nombre">
+                <label for="#">Correo electrónico</label>
+                <input type="email" name="#" id="#" placeholder="Ingrese su correo electronico">
+                <label for="#">Telefono/Celular para contacto</label>
+                <input type="number" name="#" id="#" placeholder="Ingrese un numero de contacto">
+                <label for="#">Mensaje</label>
+                <textarea name="" cols="10" rows="10"></textarea>
+                <input class="boton" type="button" value="Enviar">
+            </form>
         </section>
-        <section class="index-seccion-uno">
-          <div class="index-seccion-uno-contenedor">
-            <div class="uno">
-              <img src="./img/uno.png" alt="">
-              <div class="información">
-                <h2>Titulo</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>              
-            </div>
-            <div class="dos">
-              <img src="./img/uno.png" alt="">
-              <div class="información">
-                <h2>Titulo</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div> 
-            </div>
-            <div class="tres">
-              <img src="./img/uno.png" alt="">
-              <div class="información">
-                <h2>Titulo</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div> 
-            </div>
-          </div>
-        </section>
-        <seccion class="index-seccion-dos">
-          <div class="index-seccion-dos-contenedor">
-            <div>
-              <img src="./img/pablo-merchan-montes-hyIE90CN6b0-unsplash-PhotoRoom.png-PhotoRoom.png" alt="">
-            </div>
-            <div>
-              <h2>¡Ingredientes de primera calidad!</h2>
-              <p>Los ingredientes que utilizamos son los de mejor calidad, para que <p>
-            </div>
-          </div>
-        </seccion>
     </main>
     <footer class="pie">
       <div class="pie-contenedor">
@@ -93,10 +49,10 @@
         <div class="accesos">          
           <nav>
             <ul>
-              <li><a href="./index.html">Inicio</a></li>
-              <li><a href="./pages/productos.html">Productos</a></li>
-              <li><a href="./pages/sucursales.html">Sucursales</a></li>
-              <li><a href="./pages/contacto.html">Contacto</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./sucursales.html">Sucursales</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
           </nav>
         </div>

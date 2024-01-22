@@ -23,7 +23,6 @@ body {
     justify-content: center;
     align-items: center;
 
-    
 
     .encabezado-contenedor{
         width: 100%;
@@ -131,7 +130,7 @@ body {
             margin:0;
             width: 100vw;
             height: 50vh;
-            object-fit: none;
+            object-fit: cover;
             object-position: 50% 50%;
             opacity: 0.9;
         }
@@ -460,7 +459,7 @@ body {
     padding: 55px;
 
     .contacto-contenedor{
-        width: 70%;
+        width: 90%;
         height: 550px;
         margin-top: 25px;
         row-gap: 20px;
@@ -516,7 +515,7 @@ body {
     }
 }
 
-@media (width<=1400px){
+@media (width<=1325px){
     .encabezado-contenedor{
         .menu{
             .menu-lista{
@@ -575,6 +574,18 @@ body {
             }
         }
     }
+
+    .seccion-carrousel{
+    
+        .carousel-item{
+            img{
+                object-fit: cover;
+                object-position: 50% 50%;
+                opacity: 0.9;
+            }
+        } 
+    }
+    
 }
 
 @media (max-width: 900px){

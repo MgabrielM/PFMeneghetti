@@ -9,6 +9,7 @@
 
 body {
   background-color: #050609;
+  font-family: "Lemon", serif;
 }
 
 h1 {
@@ -36,7 +37,21 @@ h3 {
   font-size: 0.75rem;
 }
 
+.seccion-carrousel {
+  width: 100vw;
+  height: 450px;
+}
+.seccion-carrousel img {
+  margin: 0;
+  width: 100vw;
+  height: 450px;
+  object-fit: none;
+  object-position: 50% 50%;
+  opacity: 0.9;
+}
+
 body {
+  background-color: #050609;
   font-family: "Lemon", serif;
 }
 
@@ -54,8 +69,11 @@ body {
   padding: 20px 5% 20px 5%;
   background-color: #050609;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: self-start;
+}
+.index-encabezado .encabezado-contenedor .boton-oculto {
+  display: none;
 }
 .index-encabezado .encabezado-contenedor .marca {
   display: flex;
@@ -72,7 +90,7 @@ body {
 .index-encabezado .encabezado-contenedor h1 > a {
   font-size: 2.5rem;
 }
-.index-encabezado .encabezado-contenedor h1 > a .subtitulo {
+.index-encabezado .encabezado-contenedor h1 > a P .subtitulo {
   font-size: 1.5rem;
   color: red;
 }
@@ -85,40 +103,47 @@ body {
 }
 .index-encabezado .encabezado-contenedor .menu {
   display: flex;
-  padding-top: 15px;
+  padding-top: 10px;
   justify-content: center;
   align-items: center;
 }
-.index-encabezado .encabezado-contenedor .menu-lista {
+.index-encabezado .encabezado-contenedor .menu .menu-lista {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
   gap: 60px;
 }
-.index-encabezado .encabezado-contenedor .menu-lista a {
+.index-encabezado .encabezado-contenedor .menu .menu-lista a {
   font-style: italic;
+}
+.index-encabezado .encabezado-contenedor .menu-hamburger {
+  display: flex;
+  padding-top: 10px;
+  justify-content: left;
+  align-items: left;
+}
+.index-encabezado .encabezado-contenedor .menu-hamburger .menu-lista-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 20px;
+  gap: 10px;
+  color: black;
+}
+.index-encabezado .encabezado-contenedor .menu-hamburger .menu-lista-hamburger a {
+  font-style: italic;
+  color: black;
 }
 .index-encabezado .encabezado-contenedor li {
   list-style-type: none;
 }
 
-.seccion-carrousel {
-  width: 100vw;
-  height: 450px;
-}
-.seccion-carrousel img {
-  margin: 0;
-  width: 100vw;
-  height: 450px;
-  object-fit: none;
-  object-position: 50% 50%;
-  opacity: 0.9;
-}
-
 .index-seccion-uno {
   width: 100%;
-  height: 250px;
+  height: auto;
+  padding: 25px;
   background-color: #050609;
   display: flex;
   justify-content: center;
@@ -131,11 +156,12 @@ body {
   justify-content: space-evenly;
   align-items: center;
   gap: 30px;
+  color: white;
 }
 .index-seccion-uno .index-seccion-uno-contenedor > div {
   width: 30%;
   height: 200px;
-  background-color: #0e0d0d;
+  background-color: rgba(29, 27, 27, 0.3647058824);
   border-radius: 5%;
   padding: 15px 10px;
   display: flex;
@@ -160,8 +186,8 @@ body {
 }
 
 .index-seccion-dos {
-  background-color: rgba(0, 0, 0, 0.288);
-  width: 100%;
+  background-color: #050609;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -176,8 +202,8 @@ body {
   color: white;
 }
 .index-seccion-dos .index-seccion-dos-contenedor img {
-  width: 50vw;
-  height: 95vh;
+  width: 90%;
+  height: auto;
 }
 
 .pie {
@@ -187,18 +213,19 @@ body {
   justify-content: center;
   align-items: center;
   padding: 50px 0;
+  margin-top: 25px;
 }
 .pie li {
   list-style-type: none;
 }
 .pie .pie-contenedor {
-  width: 900px;
+  width: 740px;
   height: 175px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 30px 1fr;
   grid-template-areas: "tiac tisuc tiredes" "ac suc redes";
-  gap: 0 80px;
+  gap: 0 60px;
   padding: 0;
   font-weight: 100;
   font-size: 1rem;
@@ -230,7 +257,6 @@ body {
   grid-area: tisuc;
   display: flex;
   justify-content: start;
-  color: #9b9b90;
   color: red;
   border-bottom: 1px solid gold;
 }
@@ -247,7 +273,6 @@ body {
   display: flex;
   justify-content: left;
   align-items: start;
-  color: #9b9b90;
   color: red;
   border-bottom: 1px solid gold;
 }
@@ -332,7 +357,7 @@ body {
   width: 100%;
   height: 100%;
   max-width: 950px;
-  max-height: 530px;
+  max-height: 400px;
   display: block;
   object-fit: fill;
 }
@@ -360,15 +385,183 @@ body {
 }
 
 .seccion-contacto {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
-  height: auto;
+  padding: 55px 0;
 }
 .seccion-contacto .contacto-contenedor {
-  width: 70vw;
-  height: auto;
+  width: 70%;
+  height: 700px;
+  margin-top: 25px;
+  row-gap: 20px;
+  column-gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+  grid-template-areas: "nom ape" "correo tel" "asu asu" "tex tex" "bot bot";
+}
+.seccion-contacto .contacto-contenedor .campo-nombre {
+  grid-area: nom;
+}
+.seccion-contacto .contacto-contenedor .campo-apellido {
+  grid-area: ape;
+}
+.seccion-contacto .contacto-contenedor .campo-correo {
+  grid-area: correo;
+}
+.seccion-contacto .contacto-contenedor .campo-telefono {
+  grid-area: tel;
+}
+.seccion-contacto .contacto-contenedor .campo-asunto {
+  grid-area: asu;
+}
+.seccion-contacto .contacto-contenedor .campo-texto {
+  grid-area: tex;
+}
+.seccion-contacto .contacto-contenedor .campo-boton {
+  grid-area: bot;
+}
+.seccion-contacto .contacto-contenedor .centrar {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+.seccion-contacto .contacto-contenedor div > label {
+  width: 100%;
+}
+.seccion-contacto .contacto-contenedor div > input {
+  width: 100%;
+}
+.seccion-contacto .contacto-contenedor div > textarea {
+  width: 100%;
+}
+
+@media (width <= 1300px) {
+  .encabezado-contenedor .menu .menu-lista {
+    margin-top: 5px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .encabezado-contenedor .menu .menu-lista a {
+    font-size: 1rem;
+  }
+  .index-seccion-uno .index-seccion-uno-contenedor {
+    flex-direction: column;
+  }
+  .index-seccion-uno .index-seccion-uno-contenedor > div {
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    border-radius: 30px;
+  }
+}
+@media (width <= 1100px) {
+  .index-encabezado .encabezado-contenedor .menu .menu-lista {
+    gap: 10px;
+  }
+}
+@media (width <= 900px) {
+  .index-encabezado .encabezado-contenedor .menu .menu-lista {
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+@media (max-width: 900px) {
+  .menu {
+    display: none !important;
+  }
+  .index-encabezado .marca h1 > a {
+    font-size: 1rem;
+  }
+  .index-encabezado .boton-oculto {
+    display: block !important;
+    margin-top: 20px;
+    width: 100px;
+    height: 45px;
+    background-color: red;
+  }
+  .index-encabezado .encabezado-contenedor .offcanvas-body > a {
+    color: black;
+  }
+}
+@media (width <= 800px) {
+  .index-seccion-dos img {
+    display: none !important;
+  }
+  .pie {
+    height: auto;
+  }
+  .pie .pie-contenedor {
+    width: 90%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 30px 1fr 30px 1fr;
+    grid-template-areas: "tiac" "ac" "tisuc" "suc" "tiredes" "redes";
+  }
+  .pie .pie-contenedor .grid-titulo-acceso {
+    justify-content: center;
+    align-items: center;
+  }
+  .pie .pie-contenedor .accesos {
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .pie .pie-contenedor .grid-titulo-sucursales {
+    justify-content: center;
+  }
+  .pie .pie-contenedor .sucursales {
+    justify-content: space-around;
+    margin-bottom: 25px;
+  }
+  .pie .pie-contenedor .sucursales nav {
+    width: 100%;
+  }
+  .pie .pie-contenedor .sucursales ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .pie .pie-contenedor .grid-titulo-redes {
+    justify-content: center;
+  }
+  .pie .pie-contenedor .redes {
+    justify-content: center;
+  }
+  .pie .pie-contenedor .redes nav {
+    width: 100%;
+  }
+  .pie .pie-contenedor .redes ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (width <= 800px) {
+  .index-seccion-uno .index-seccion-uno-contenedor .uno {
+    flex-direction: column;
+    height: 300px;
+    padding: 0 20px;
+  }
+  .index-seccion-uno .index-seccion-uno-contenedor .dos {
+    flex-direction: column;
+    height: 300px;
+    padding: 0 20px;
+  }
+  .index-seccion-uno .index-seccion-uno-contenedor .tres {
+    flex-direction: column;
+    height: 300px;
+    padding: 0 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

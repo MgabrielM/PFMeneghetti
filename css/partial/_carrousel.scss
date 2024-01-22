@@ -1,0 +1,13 @@
+.seccion-carrousel{
+    width: 100vw;
+    height: 450px;
+
+    img{
+        margin:0;
+        width: 100vw;
+        height: 450px;
+        object-fit: none;
+        object-position: 50% 50%;
+        opacity: 0.9;
+    } 
+}

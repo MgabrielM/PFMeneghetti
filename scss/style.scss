@@ -2,16 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
+@import "../css/partial/variables";
 @import "../css/partial/generales";
+//@import "../css/partial/header";
+@import "../css/partial/carrousel";
 
-body{
-    //  font-family: "Permanent Marker", cursive;
-    // font-family: 'Oswald', sans-serif;
+$color-primario: #050609;
+$color-secundario: red;
+$color-terciario: gold;
+
+body {
+    background-color: $color-primario;
     font-family: 'Lemon', serif;
-    // font-family: 'Shadows Into Light', cursive;
-}
+  }
 
-.index-encabezado{
+  .index-encabezado{
     width: 100%;
     height: 100px;
     color: white; 
@@ -25,8 +30,12 @@ body{
         padding: 20px 5% 20px 5%;
         background-color: #050609;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: self-start;
+
+        .boton-oculto{
+            display: none;
+        }
 
         .marca{
             display: flex;
@@ -45,7 +54,7 @@ body{
         }
 
         h1>a{
-            font-size: 2.5rem;
+            font-size: 2.5rem;P
             
             .subtitulo{
                 font-size: 1.50rem;
@@ -63,20 +72,42 @@ body{
 
         .menu{
             display: flex;
-            padding-top: 15px;
+            padding-top: 10px;
             justify-content: center;
             align-items: center;
+
+            .menu-lista{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 20px;
+                gap: 60px;
+                
+                a{
+                    font-style: italic;
+                }
+            }
         }
 
-        .menu-lista{
+        .menu-hamburger{
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 20px;
-            gap: 60px;
-            
-            a{
-                font-style: italic;
+            padding-top: 10px;
+            justify-content: left;
+            align-items: left;
+
+            .menu-lista-hamburger{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: left;
+                padding: 20px;
+                gap: 10px;
+                color: black;
+                
+                a{
+                    font-style: italic;
+                    color:black;
+                }
             }
         }
 
@@ -86,24 +117,11 @@ body{
     }   
 }
 
-.seccion-carrousel{
-    width: 100vw;
-    height: 450px;
-
-    img{
-        margin:0;
-        width: 100vw;
-        height: 450px;
-        object-fit: none;
-        object-position: 50% 50%;
-        opacity: 0.9;
-    } 
-}
-
 .index-seccion-uno{
     width: 100%;
-    height: 250px;
-    background-color: #050609;
+    height: auto;
+    padding: 25px;
+    background-color: $color-primario;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,11 +133,12 @@ body{
         justify-content: space-evenly;
         align-items: center;
         gap: 30px;
+        color: white;
 
         &>div{
             width: 30%;
             height: 200px;            
-            background-color: #0e0d0d;
+            background-color: #1d1b1b5d;
             border-radius: 5%;
             padding: 15px 10px;
             display: flex;
@@ -150,14 +169,13 @@ body{
                 object-fit: contain;
             }
         }
-
     }
 }
 
 .index-seccion-dos{
-    background-color: rgba(0, 0, 0, 0.288);
-    width: 100%;
-    height: 100vh;
+    background-color: $color-primario;
+    width: 100vw;
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,8 +189,8 @@ body{
         color: white;
         
         img{
-            width: 50vw;
-            height: 95vh;
+            width: 90%;
+            height: auto;
         }        
     }
 }
@@ -184,13 +202,14 @@ body{
   justify-content: center;
   align-items: center;
   padding: 50px 0;
+  margin-top: 25px;
 
   li{
     list-style-type: none;
   }
 
   .pie-contenedor{
-    width: 900px;
+    width: 740px;
     height: 175px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -198,7 +217,7 @@ body{
     grid-template-areas: 
       "tiac tisuc tiredes"
       "ac suc redes";
-      gap: 0 80px ;
+      gap: 0 60px ;
       padding:0;
 
       font-weight: 100;
@@ -223,7 +242,7 @@ body{
         display: flex;
         justify-content: start;
         color:red; 
-        border-bottom: 1px solid gold;
+        border-bottom: 1px solid $color-terciario;
         }
         .accesos{
             grid-area: ac;
@@ -237,9 +256,8 @@ body{
             grid-area: tisuc;
             display: flex;
             justify-content: start;
-            color:#9b9b90;        
-            color:red; 
-            border-bottom: 1px solid gold;
+            color:$color-secundario;    
+            border-bottom: 1px solid $color-terciario;
         }
         .sucursales{
             grid-area: suc;
@@ -255,9 +273,8 @@ body{
             display: flex;
             justify-content: left;
             align-items:start;
-            color:#9b9b90;        
-            color:red; 
-            border-bottom: 1px solid gold;
+            color: $color-secundario; 
+            border-bottom: 1px solid $color-terciario;
         }
         .redes{
             grid-area: redes;
@@ -285,11 +302,11 @@ body{
      }
 
     .titulo-hamburguesa{
-        color: gold;
+        color: $color-terciario;
     }
 
     .titulo-papas{
-        color: red;
+        color: $color-secundario;
     }
     
     .contenedor-menu-primario{
@@ -355,7 +372,7 @@ body{
             width: 100%;
             height: 100%;
             max-width: 950px;
-            max-height: 530px;
+            max-height: 400px;
             display: block;
             object-fit: fill;
         }
@@ -388,14 +405,245 @@ body{
 
 // PAGINA CONTACTO
 .seccion-contacto{
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
-    height: auto;
+    padding: 55px 0 ;
 
     .contacto-contenedor{
-        width: 70vw;
+        width: 70%;
+        height: 700px;
+        margin-top: 25px;
+        row-gap: 20px;
+        column-gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+        grid-template-areas:
+        "nom ape"
+        "correo tel"
+        "asu asu"
+        "tex tex"
+        "bot bot";
+
+        .campo-nombre{
+            grid-area: nom;
+        }
+        .campo-apellido{
+            grid-area: ape;
+        }
+        .campo-correo{
+            grid-area: correo;
+        }
+        .campo-telefono{
+            grid-area: tel;
+        }
+        .campo-asunto{
+            grid-area: asu;
+        }
+        .campo-texto{
+            grid-area: tex;
+        }
+        .campo-boton{
+            grid-area: bot;
+        }
+
+        .centrar{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
+        }
+
+        div>label{
+            width: 100%;
+        }
+        div>input{
+            width: 100%;
+        }
+        div>textarea{
+            width: 100%;
+        }
+    }
+}
+
+@media (width<=1300px){
+    .encabezado-contenedor{
+        .menu{
+            .menu-lista{
+                margin-top:5px;
+                gap:10px;
+                justify-content: center;
+                align-items: center;
+                padding:0;
+
+                a{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+
+    .index-seccion-uno{    
+        .index-seccion-uno-contenedor{
+            flex-direction: column;
+            
+            &>div{
+                justify-content: space-around;
+                align-items: center;
+                width: 90%;
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+@media (width<=1100px){
+    .index-encabezado{
+        .encabezado-contenedor{
+            .menu{
+                .menu-lista{
+                    gap: 10px;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (width<=900px){
+    .index-encabezado{
+
+        .encabezado-contenedor{
+            .menu{
+                .menu-lista{
+                    padding: 0;
+                    flex-wrap: wrap;
+                    gap: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .menu{
+        display:none !important;
+    }
+    
+    .index-encabezado{
+        .marca{
+            h1>a{
+                font-size: 1rem;
+            }
+        }
+        .boton-oculto{
+            display: block !important;
+            margin-top: 20px;
+            width: 100px;
+            height: 45px;
+            background-color: red;
+        }
+
+        .encabezado-contenedor{
+            .offcanvas-body>a{
+                color:black;
+            }
+        }
+    }     
+}
+
+@media (width<=800px){
+    .index-seccion-dos{
+        img{
+            display: none !important;
+        }
+    }
+
+    .pie{
         height: auto;
+        .pie-contenedor{
+            width: 90%;
+            height: auto;
+            grid-template-columns: 1fr;
+            grid-template-rows: 30px 1fr 30px 1fr 30px 1fr;
+            grid-template-areas: 
+            "tiac"
+            "ac"
+            "tisuc"
+            "suc"
+            "tiredes"
+            "redes";
+
+            .grid-titulo-acceso{
+                justify-content: center;
+                align-items: center;
+            }
+            .accesos{
+                justify-content: center;
+                margin-bottom: 25px;
+            }
+            .grid-titulo-sucursales{
+                justify-content: center;
+            }
+            .sucursales{
+                justify-content: space-around;
+                margin-bottom: 25px;
+
+                nav{
+                    width: 100%;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }            
+            .grid-titulo-redes{
+                justify-content: center;
+            }
+            .redes{
+                justify-content: center;
+
+                nav{
+                    width: 100%;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media (width<=800px){
+    
+    .index-seccion-uno{
+        .index-seccion-uno-contenedor{
+            .uno{
+                flex-direction: column;    
+                height: 300px;
+                padding: 0 20px;      
+            }
+            .dos{
+                flex-direction: column;
+                height: 300px;
+                padding: 0 20px;
+            }
+            .tres{
+                flex-direction: column;
+                height: 300px;
+                padding: 0 50px;
+            }
+        }
     }
 }

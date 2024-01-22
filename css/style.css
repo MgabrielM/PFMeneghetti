@@ -100,6 +100,7 @@ body {
 }
 .index-encabezado .encabezado-contenedor a:hover {
   color: gold;
+  text-decoration: underline;
 }
 .index-encabezado .encabezado-contenedor .menu {
   display: flex;
@@ -140,6 +141,19 @@ body {
   list-style-type: none;
 }
 
+.seccion-carrousel {
+  width: 100vw;
+  height: 55vh;
+}
+.seccion-carrousel .carousel-item img {
+  margin: 0;
+  width: 100vw;
+  height: 50vh;
+  object-fit: none;
+  object-position: 50% 50%;
+  opacity: 0.9;
+}
+
 .index-seccion-uno {
   width: 100%;
   height: auto;
@@ -161,28 +175,41 @@ body {
 .index-seccion-uno .index-seccion-uno-contenedor > div {
   width: 30%;
   height: 200px;
-  background-color: rgba(29, 27, 27, 0.3647058824);
+  background-color: rgba(29, 27, 27, 0.8705882353);
   border-radius: 5%;
-  padding: 15px 10px;
+  padding: 15px 15px;
   display: flex;
-  justify-content: start;
+  gap: 25px;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 .index-seccion-uno .index-seccion-uno-contenedor .uno img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
+  background-color: peru;
+  border-radius: 25px;
+  object-position: block;
+  object-fit: cover;
 }
 .index-seccion-uno .index-seccion-uno-contenedor .dos img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
+  background-color: rgb(187, 223, 220);
+  border-radius: 25px;
+  object-position: block;
+  object-fit: cover;
 }
 .index-seccion-uno .index-seccion-uno-contenedor .tres img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
+  background-color: white;
+  border-radius: 25px;
+  object-position: block;
+  object-fit: cover;
 }
 
 .index-seccion-dos {
@@ -345,7 +372,7 @@ body {
   color: white;
 }
 .seccion-sucursal .contenedor-sucursal {
-  width: 70%;
+  width: 80%;
   height: auto;
   display: grid;
   padding: 20px;
@@ -443,7 +470,7 @@ body {
   width: 100%;
 }
 
-@media (width <= 1300px) {
+@media (width <= 1400px) {
   .encabezado-contenedor .menu .menu-lista {
     margin-top: 5px;
     gap: 10px;
@@ -498,6 +525,12 @@ body {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr 1fr;
     grid-template-areas: "nom" "ape" "correo" "tel" "asu" "tex" "bot";
     height: 650px;
+  }
+  .seccion-sucursal .contenedor-sucursal {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.25fr 1fr 1fr;
+    grid-template-areas: "suctit" "sucdir" "suc" "sucmap";
+    row-gap: 10px;
   }
 }
 @media (width <= 800px) {
@@ -557,17 +590,18 @@ body {
 @media (width <= 800px) {
   .index-seccion-uno .index-seccion-uno-contenedor .uno {
     flex-direction: column;
-    height: 300px;
+    justify-content: space-around;
+    height: 250px;
     padding: 0 20px;
   }
   .index-seccion-uno .index-seccion-uno-contenedor .dos {
     flex-direction: column;
-    height: 300px;
-    padding: 0 20px;
+    height: 250px;
+    padding: 25px 25px;
   }
   .index-seccion-uno .index-seccion-uno-contenedor .tres {
     flex-direction: column;
-    height: 300px;
+    height: 250px;
     padding: 0 50px;
   }
 }

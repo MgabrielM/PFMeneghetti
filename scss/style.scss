@@ -344,7 +344,9 @@ body {
     }
     
     .contenedor-menu-primario{
-        width: 90%;
+        width: 1300px;
+        max-width: 85%;
+        min-width: 450px;
         height: auto;
         display: flex;
         flex-direction: column;

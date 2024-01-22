@@ -353,14 +353,16 @@ body {
             justify-content: space-around;
             align-items: center;
             background-color: #9b9b9011;
-            padding: 40px;
+            padding: 45px;
             gap: 40px;
+            border-radius: 25px;
             
             img{
-                width: 200px;
-                height: 200px;
-                background-color: rgba(199, 243, 5, 0.055);
-                border-radius: 35%;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                background-color: rgb(247, 248, 244);
+                border-radius: 50%;
             }
             
         }

@@ -364,7 +364,7 @@ body {
             img{
                 width: 150px;
                 height: 150px;
-                object-fit: cover;
+                object-fit: contain;
                 background-color: rgb(247, 248, 244);
                 border-radius: 50%;
             }

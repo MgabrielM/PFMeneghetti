@@ -230,7 +230,7 @@ body {
 }
 
 .pie{
-  width: 100%;
+  width: 100vw;
   height: 240px;
   display: flex;
   justify-content: center;
@@ -244,7 +244,7 @@ body {
   }
 
   .pie-contenedor{
-    width: 740px;
+    width: 80%;
     height: 175px;
     display: grid;
     grid-template-columns: 2fr 3.5fr 2fr;
@@ -647,8 +647,13 @@ body {
     }
 
     .index-seccion-dos{
+        .index-seccion-dos-contenedor{
+            height: 50vh;
+        }
+
         img{
             display: none !important;
+        }
         }
     }
 
@@ -710,7 +715,7 @@ body {
             }
         }
     }
-}
+
 
 @media (width<=800px){    
     .index-seccion-uno{

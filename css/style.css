@@ -236,7 +236,7 @@ body {
 }
 
 .pie {
-  width: 100%;
+  width: 100vw;
   height: 240px;
   display: flex;
   justify-content: center;
@@ -249,7 +249,7 @@ body {
   list-style-type: none;
 }
 .pie .pie-contenedor {
-  width: 740px;
+  width: 80%;
   height: 175px;
   display: grid;
   grid-template-columns: 2fr 3.5fr 2fr;
@@ -552,59 +552,63 @@ body {
     justify-content: first baseline;
     align-items: center;
   }
+  .index-seccion-dos .index-seccion-dos-contenedor {
+    height: 50vh;
+  }
   .index-seccion-dos img {
     display: none !important;
   }
-  .pie {
-    height: auto;
-  }
-  .pie .pie-contenedor {
-    width: 90%;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 30px 1fr 30px 1fr 30px 1fr;
-    grid-template-areas: "tiac" "ac" "tisuc" "suc" "tiredes" "redes";
-  }
-  .pie .pie-contenedor .grid-titulo-acceso {
-    justify-content: center;
-    align-items: center;
-  }
-  .pie .pie-contenedor .accesos {
-    justify-content: center;
-    margin-bottom: 25px;
-  }
-  .pie .pie-contenedor .grid-titulo-sucursales {
-    justify-content: center;
-  }
-  .pie .pie-contenedor .sucursales {
-    justify-content: space-around;
-    margin-bottom: 25px;
-  }
-  .pie .pie-contenedor .sucursales nav {
-    width: 100%;
-  }
-  .pie .pie-contenedor .sucursales ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .pie .pie-contenedor .grid-titulo-redes {
-    justify-content: center;
-  }
-  .pie .pie-contenedor .redes {
-    justify-content: center;
-  }
-  .pie .pie-contenedor .redes nav {
-    width: 100%;
-  }
-  .pie .pie-contenedor .redes ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
 }
+.pie {
+  height: auto;
+}
+.pie .pie-contenedor {
+  width: 90%;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 1fr 30px 1fr 30px 1fr;
+  grid-template-areas: "tiac" "ac" "tisuc" "suc" "tiredes" "redes";
+}
+.pie .pie-contenedor .grid-titulo-acceso {
+  justify-content: center;
+  align-items: center;
+}
+.pie .pie-contenedor .accesos {
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.pie .pie-contenedor .grid-titulo-sucursales {
+  justify-content: center;
+}
+.pie .pie-contenedor .sucursales {
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+.pie .pie-contenedor .sucursales nav {
+  width: 100%;
+}
+.pie .pie-contenedor .sucursales ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.pie .pie-contenedor .grid-titulo-redes {
+  justify-content: center;
+}
+.pie .pie-contenedor .redes {
+  justify-content: center;
+}
+.pie .pie-contenedor .redes nav {
+  width: 100%;
+}
+.pie .pie-contenedor .redes ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @media (width <= 800px) {
   .index-seccion-uno .index-seccion-uno-contenedor .uno {
     flex-direction: column;

@@ -43,6 +43,12 @@ body {
 
             .titulo{
                 font-family: 'Lemon', serif;
+                color: $color-terciario;
+                text-decoration: none;
+            }
+
+            .subtitulo{
+                color: white;
             }
 
             img{
@@ -513,40 +519,91 @@ body {
 }
 
 // PAGINA HAMBURGUESA VEGANA
-.seccion-hamburguesa{
-    width: auto;
+.conte {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #121212;
+    background: linear-gradient(
+      135deg,
+      #121212 25%,
+      #bdb107 25%,
+      #bdb107 50%,
+      #121212 50%,
+      #121212 75%,
+      #bdb107 75%,
+      #bdb107
+    );
+    border-radius: 25px;
+    background-size: 40px 40px;
+    animation: move 4s linear infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+
+
+.seccion-hamburguesa{
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
 
     .contenedor-hamburguesa{
-        width: 1300px;
+        width: 80%;
         height: auto;
-        display: grid;
-        grid-template-columns: 2fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "titulo titulo"
-        "imagen detalle";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 45px;
 
-        .hamburguesa-titulo{
-            grid-area: titulo;
-        }
+        .titulo-hamburguesa{
+            background-color: #050609;
+            border-radius: 25px;
+            padding: 25px;
 
-        .hamburguesa-detalle{
-            grid-area: detalle;
-        }
-
-        .hamburguesa-imagen{
-            grid-area: imagen;
-
-            img{
-                width: 100%;
+            &:hover{
+                background-color: gold;
+                color: #050609;
             }
-        }
 
-    }
+            .titulo-vegano{
+                font-size: 3rem;
+                color: gold;
+
+                &:hover{
+                    color: #050609;
+                }
+    
+            }   
+        }  
+
+        .detalle-vegano{
+            background-color: #050609;
+            border-radius: 25px;
+            padding: 25px;
+            font-size: 3rem;
+            color: gold;
+            text-align: center;
+
+            &:hover{
+                color: #050609;
+                background-color: gold;
+            }
+        }             
+    }    
 }
 
 // PAGINA CONTACTO
@@ -633,7 +690,6 @@ body {
             }
         }
     }
-
 
     .index-seccion-uno{    
         .index-seccion-uno-contenedor{
@@ -754,7 +810,6 @@ body {
             flex-direction: column;
             justify-content: first baseline;
             align-items: center;
-
         }
     }
 
@@ -766,7 +821,7 @@ body {
         img{
             display: none !important;
         }
-        }
+    }
     
 
     .pie{
@@ -827,7 +882,14 @@ body {
             }
         }
     }
+
+    .hamburguesa-detalle>img{
+        width:100%;
     }
+    .detalle-vegano{
+        display: none !important;
+    }
+}
 
 
 @media (width<=800px){    

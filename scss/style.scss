@@ -170,11 +170,9 @@ body {
 
         .uno{
             img{
-                width: 100px;
-                height: 100px;  
+                width: 150px;
+                height: 150px;               
                 object-fit: contain;
-                background-color: peru;
-                border-radius: 25px;
                 object-position: block;
                 object-fit: cover;
             }
@@ -182,26 +180,87 @@ body {
 
         .dos{
             img{
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            background-color: rgb(187, 223, 220);
-            border-radius: 25px;
-            object-position: block;
-            object-fit: cover;
+                width: 150px;
+                height: 150px;               
+                object-fit: contain;
+                object-position: block;
+                object-fit: cover;
+                padding-bottom: 15px;
         }}
 
         .tres{
             img{
-                width: 100px;
-            height: 100px;               
+                width: 200px;
+                height: 200px;               
                 object-fit: contain;
-                background-color: white;
-                border-radius: 25px;
                 object-position: block;
                 object-fit: cover;
+                padding-top: 10px;
             }
         }
+
+        .carde {
+            position: relative;
+            width: 90%;
+            height: 200px;
+            background: linear-gradient(45deg, #272121f8 45%,  #5fff03 100% );
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+          
+            &:hover {
+                transform: rotate(-5deg) scale(1.1);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+                .carde__content {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                    opacity: 1;
+                  }
+
+                svg {
+                scale: 0;
+                transform: rotate(-45deg);
+                }
+
+              }
+
+          svg {
+            width: 48px;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+          }
+
+          .carde__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 100%;
+            height: 100%;
+            padding: 35px;
+            box-sizing: border-box;
+            background-color: white;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+
+            .carde__title {
+                margin: 0;
+                font-size: 24px;
+                color: #333;
+                font-weight: 700;
+              }
+              
+              .carde__description {
+                margin: 10px 0 0;
+                font-size: 14px;
+                color: #777;
+                line-height: 1.4;
+              }
+          }
+        }          
     }
 }
 
@@ -361,7 +420,7 @@ body {
             padding: 45px;
             gap: 40px;
             border-radius: 25px;
-            
+
             img{
                 width: 150px;
                 height: 150px;
@@ -627,7 +686,6 @@ body {
             "tex"
             "bot";
             height: 650px;
-
         }
     }
 
@@ -666,7 +724,7 @@ body {
             display: none !important;
         }
         }
-    }
+    
 
     .pie{
         height: auto;
@@ -726,6 +784,7 @@ body {
             }
         }
     }
+    }
 
 
 @media (width<=800px){    
@@ -748,5 +807,9 @@ body {
                 padding: 0 50px;
             }
         }
+    }
+
+    .index-seccion-dos {
+        height: 25vh;
     }
 }

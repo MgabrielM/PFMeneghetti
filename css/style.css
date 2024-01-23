@@ -36,19 +36,6 @@ h3 {
   font-size: 0.75rem;
 }
 
-.seccion-carrousel {
-  width: 100vw;
-  height: 450px;
-}
-.seccion-carrousel img {
-  margin: 0;
-  width: 100vw;
-  height: 450px;
-  object-fit: none;
-  object-position: 50% 50%;
-  opacity: 0.9;
-}
-
 body {
   background-color: #050609;
   font-family: "Oswald", sans-serif;
@@ -187,31 +174,81 @@ body {
   overflow: hidden;
 }
 .index-seccion-uno .index-seccion-uno-contenedor .uno img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
-  background-color: peru;
-  border-radius: 25px;
   object-position: block;
   object-fit: cover;
 }
 .index-seccion-uno .index-seccion-uno-contenedor .dos img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
-  background-color: rgb(187, 223, 220);
-  border-radius: 25px;
   object-position: block;
   object-fit: cover;
+  padding-bottom: 15px;
 }
 .index-seccion-uno .index-seccion-uno-contenedor .tres img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
-  background-color: white;
-  border-radius: 25px;
   object-position: block;
   object-fit: cover;
+  padding-top: 10px;
+}
+.index-seccion-uno .index-seccion-uno-contenedor .carde {
+  position: relative;
+  width: 90%;
+  height: 200px;
+  background: linear-gradient(45deg, rgba(39, 33, 33, 0.9725490196) 45%, #5fff03 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.index-seccion-uno .index-seccion-uno-contenedor .carde:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.index-seccion-uno .index-seccion-uno-contenedor .carde:hover .carde__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+.index-seccion-uno .index-seccion-uno-contenedor .carde:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+.index-seccion-uno .index-seccion-uno-contenedor .carde svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.index-seccion-uno .index-seccion-uno-contenedor .carde .carde__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+  box-sizing: border-box;
+  background-color: white;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.index-seccion-uno .index-seccion-uno-contenedor .carde .carde__content .carde__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+.index-seccion-uno .index-seccion-uno-contenedor .carde .carde__content .carde__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
 }
 
 .index-seccion-dos {
@@ -563,57 +600,56 @@ body {
   .index-seccion-dos img {
     display: none !important;
   }
+  .pie {
+    height: auto;
+  }
+  .pie .pie-contenedor {
+    width: 90%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 30px 1fr 30px 1fr;
+    grid-template-areas: "tiac" "ac" "tisuc" "suc" "tiredes" "redes";
+  }
+  .pie .pie-contenedor .grid-titulo-acceso {
+    justify-content: center;
+    align-items: center;
+  }
+  .pie .pie-contenedor .accesos {
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .pie .pie-contenedor .grid-titulo-sucursales {
+    justify-content: center;
+  }
+  .pie .pie-contenedor .sucursales {
+    justify-content: space-around;
+    margin-bottom: 25px;
+  }
+  .pie .pie-contenedor .sucursales nav {
+    width: 100%;
+  }
+  .pie .pie-contenedor .sucursales ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .pie .pie-contenedor .grid-titulo-redes {
+    justify-content: center;
+  }
+  .pie .pie-contenedor .redes {
+    justify-content: center;
+  }
+  .pie .pie-contenedor .redes nav {
+    width: 100%;
+  }
+  .pie .pie-contenedor .redes ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
-.pie {
-  height: auto;
-}
-.pie .pie-contenedor {
-  width: 90%;
-  height: auto;
-  grid-template-columns: 1fr;
-  grid-template-rows: 30px 1fr 30px 1fr 30px 1fr;
-  grid-template-areas: "tiac" "ac" "tisuc" "suc" "tiredes" "redes";
-}
-.pie .pie-contenedor .grid-titulo-acceso {
-  justify-content: center;
-  align-items: center;
-}
-.pie .pie-contenedor .accesos {
-  justify-content: center;
-  margin-bottom: 25px;
-}
-.pie .pie-contenedor .grid-titulo-sucursales {
-  justify-content: center;
-}
-.pie .pie-contenedor .sucursales {
-  justify-content: space-around;
-  margin-bottom: 25px;
-}
-.pie .pie-contenedor .sucursales nav {
-  width: 100%;
-}
-.pie .pie-contenedor .sucursales ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-.pie .pie-contenedor .grid-titulo-redes {
-  justify-content: center;
-}
-.pie .pie-contenedor .redes {
-  justify-content: center;
-}
-.pie .pie-contenedor .redes nav {
-  width: 100%;
-}
-.pie .pie-contenedor .redes ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
 @media (width <= 800px) {
   .index-seccion-uno .index-seccion-uno-contenedor .uno {
     flex-direction: column;
@@ -630,6 +666,9 @@ body {
     flex-direction: column;
     height: 250px;
     padding: 0 50px;
+  }
+  .index-seccion-dos {
+    height: 25vh;
   }
 }
 

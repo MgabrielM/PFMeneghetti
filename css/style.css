@@ -476,6 +476,23 @@ body {
 }
 .seccion-hamburguesa .contenedor-hamburguesa {
   width: 1300px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "titulo titulo" "imagen detalle";
+}
+.seccion-hamburguesa .contenedor-hamburguesa .hamburguesa-titulo {
+  grid-area: titulo;
+}
+.seccion-hamburguesa .contenedor-hamburguesa .hamburguesa-detalle {
+  grid-area: detalle;
+}
+.seccion-hamburguesa .contenedor-hamburguesa .hamburguesa-imagen {
+  grid-area: imagen;
+}
+.seccion-hamburguesa .contenedor-hamburguesa .hamburguesa-imagen img {
+  width: 100%;
 }
 
 .seccion-contacto {

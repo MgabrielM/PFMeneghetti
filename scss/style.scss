@@ -23,7 +23,6 @@ body {
     justify-content: center;
     align-items: center;
 
-
     .encabezado-contenedor{
         width: 100%;
         height: auto;
@@ -523,6 +522,30 @@ body {
 
     .contenedor-hamburguesa{
         width: 1300px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "titulo titulo"
+        "imagen detalle";
+
+        .hamburguesa-titulo{
+            grid-area: titulo;
+        }
+
+        .hamburguesa-detalle{
+            grid-area: detalle;
+        }
+
+        .hamburguesa-imagen{
+            grid-area: imagen;
+
+            img{
+                width: 100%;
+            }
+        }
+
     }
 }
 

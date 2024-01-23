@@ -1,131 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-@import "../css/partial/variables";
-@import "../css/partial/generales";
-//@import "../css/partial/header";
-@import "../css/partial/carrousel";
-
 $color-primario: #050609;
 $color-secundario: red;
 $color-terciario: gold;
+
+@import "../css/partial/generales";
+@import "../css/partial/header";
+@import "../css/partial/pie";
 
 body {
     background-color: $color-primario;
     font-family: 'Oswald', sans-serif;
   }
-
-  .index-encabezado{
-    width: 100%;
-    height: 100px;
-    color: white; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .encabezado-contenedor{
-        width: 100%;
-        height: auto;
-        padding: 0 5%;
-        background-color: #050609;
-        display: flex;
-        justify-content: space-between;
-        align-items: self-start;
-
-        .boton-oculto{
-            display: none;
-        }
-
-        .marca{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .titulo{
-                font-family: 'Lemon', serif;
-                color: $color-terciario;
-                text-decoration: none;
-            }
-
-            .subtitulo{
-                color: white;
-            }
-
-            img{
-                width: 80px;
-                height: 80px;
-                // object-view-box: inset(10% 20% 10% 20%);
-            }
-        }
-
-        h1{
-            padding-top:15px;
-        }
-
-        h1>a{
-            font-size: 2.5rem;P
-            
-            .subtitulo{
-                font-size: 1.50rem;
-                color: red;
-            }
-        }
-        
-        a{  
-            color: white;
-            font-size: 1.25rem;
-            &:hover{
-                color: gold;
-                text-decoration: underline;
-            }
-        }
-
-        .menu{
-            display: flex;
-            padding-top: 10px;
-            justify-content: center;
-            align-items: center;
-
-            .menu-lista{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                padding: 20px;
-                gap: 60px;
-                
-                a{
-                    font-style: italic;
-                }
-            }
-        }
-
-        .menu-hamburger{
-            display: flex;
-            padding-top: 10px;
-            justify-content: left;
-            align-items: left;
-
-            .menu-lista-hamburger{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: left;
-                padding: 20px;
-                gap: 10px;
-                color: black;
-                
-                a{
-                    font-style: italic;
-                    color:black;
-                }
-            }
-        }
-        li{
-            list-style-type: none;            
-        }
-    }   
-}
-
+  
 .seccion-carrousel{
     width: 100vw;
     height: 55vh;
@@ -299,98 +187,6 @@ body {
     }
 }
 
-.pie{
-  width: 100vw;
-  height: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  margin-top: 25px;
-  background-color: #1d1b1b5d;
-
-  li{
-    list-style-type: none;
-  }
-
-  .pie-contenedor{
-    width: 80%;
-    height: 175px;
-    display: grid;
-    grid-template-columns: 2fr 3.5fr 2fr;
-    grid-template-rows: 30px 1fr;
-    grid-template-areas: 
-      "tiac tisuc tiredes"
-      "ac suc redes";
-      gap: 0 60px ;
-      padding:0;
-      font-weight: 100;
-      font-size: 1rem;
-
-      nav{
-        ul{
-            padding: 0px;
-
-            a{
-                color:#9b9b90;
-
-                &:hover{
-                    color: white;
-                }
-            }
-        }
-      }
-
-      .grid-titulo-acceso{
-        grid-area: tiac;
-        display: flex;
-        justify-content: start;
-        color:red; 
-        border-bottom: 1px solid $color-terciario;
-        }
-        .accesos{
-            grid-area: ac;
-            display: flex;
-            align-items: start; 
-            justify-content: start;
-            padding-top: 15px;
-        }
-        
-        .grid-titulo-sucursales{
-            grid-area: tisuc;
-            display: flex;
-            justify-content: start;
-            color:$color-secundario;    
-            border-bottom: 1px solid $color-terciario;
-        }
-        .sucursales{
-            grid-area: suc;
-            display: flex;
-            flex-direction: column;
-            align-items: start; 
-            justify-content: start;
-            padding-top: 15px;
-        }
-        
-        .grid-titulo-redes{
-            grid-area: tiredes;
-            display: flex;
-            justify-content: left;
-            align-items:start;
-            color: $color-secundario; 
-            border-bottom: 1px solid $color-terciario;
-        }
-        .redes{
-            grid-area: redes;
-            display: flex;
-            flex-direction: column;
-            align-items: start; 
-            justify-content: start;
-            padding-top: 15px;
-        }
-    }
-}
-
 // PAGINA PRODUCTOS
 .contenedor-menu{
     display: flex;
@@ -459,6 +255,7 @@ body {
     align-items: center;
     justify-content: center;
     height: auto;
+    margin: 35px;
 
     .seccion-sucursal-titulo{
         margin-top: 25px;
@@ -471,7 +268,7 @@ body {
     }
 
     .contenedor-sucursal{
-        width: 80%;
+        width: 90%;
         height: auto;
         display: grid;
         padding: 20px;
@@ -497,14 +294,14 @@ body {
         }
         .sucursal-uno-titulo{
             grid-area: suctit;
-            background-color: red;     
+            background-color: gold;     
             display: flex;
             justify-content: center;
             align-items: center;    
         }
         .sucursal-uno-direccion{
             grid-area: sucdir;
-            background-color: red; 
+            background-color: white; 
             display: flex;
             justify-content: center;
             align-items: center;         
@@ -674,12 +471,12 @@ body {
     }
 }
 
-@media (width<=1325px){
+@media (width<=1050px){
     .encabezado-contenedor{
         .menu{
             .menu-lista{
                 margin-top:5px;
-                gap:10px;
+                gap:20px;
                 justify-content: center;
                 align-items: center;
                 padding:0;
@@ -705,20 +502,6 @@ body {
     }
 }
 
-@media (width<=1150px){
-    .index-encabezado{
-        .encabezado-contenedor{
-            .menu{
-                .menu-lista{
-                    gap: 10px;
-                }
-            }
-        }
-    }
-
-
-}
-
 @media (width<=900px){
     .index-encabezado{
 
@@ -727,7 +510,7 @@ body {
                 .menu-lista{
                     padding: 0;
                     flex-wrap: wrap;
-                    gap: 5px;
+                    gap: 20px;
                 }
             }
         }

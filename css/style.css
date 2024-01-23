@@ -36,11 +36,6 @@ h3 {
   font-size: 0.75rem;
 }
 
-body {
-  background-color: #050609;
-  font-family: "Oswald", sans-serif;
-}
-
 .index-encabezado {
   width: 100%;
   height: 100px;
@@ -133,6 +128,91 @@ body {
 }
 .index-encabezado .encabezado-contenedor li {
   list-style-type: none;
+}
+
+.pie {
+  width: 100vw;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  margin-top: 25px;
+  background-color: rgba(29, 27, 27, 0.3647058824);
+}
+.pie li {
+  list-style-type: none;
+}
+.pie .pie-contenedor {
+  width: 80%;
+  height: 175px;
+  display: grid;
+  grid-template-columns: 2fr 3.5fr 2fr;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas: "tiac tisuc tiredes" "ac suc redes";
+  gap: 0 60px;
+  padding: 0;
+  font-weight: 100;
+  font-size: 1rem;
+}
+.pie .pie-contenedor nav ul {
+  padding: 0px;
+}
+.pie .pie-contenedor nav ul a {
+  color: #9b9b90;
+}
+.pie .pie-contenedor nav ul a:hover {
+  color: white;
+}
+.pie .pie-contenedor .grid-titulo-acceso {
+  grid-area: tiac;
+  display: flex;
+  justify-content: start;
+  color: red;
+  border-bottom: 1px solid gold;
+}
+.pie .pie-contenedor .accesos {
+  grid-area: ac;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding-top: 15px;
+}
+.pie .pie-contenedor .grid-titulo-sucursales {
+  grid-area: tisuc;
+  display: flex;
+  justify-content: start;
+  color: red;
+  border-bottom: 1px solid gold;
+}
+.pie .pie-contenedor .sucursales {
+  grid-area: suc;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 15px;
+}
+.pie .pie-contenedor .grid-titulo-redes {
+  grid-area: tiredes;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  color: red;
+  border-bottom: 1px solid gold;
+}
+.pie .pie-contenedor .redes {
+  grid-area: redes;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 15px;
+}
+
+body {
+  background-color: #050609;
+  font-family: "Oswald", sans-serif;
 }
 
 .seccion-carrousel {
@@ -283,86 +363,6 @@ body {
   height: auto;
 }
 
-.pie {
-  width: 100vw;
-  height: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  margin-top: 25px;
-  background-color: rgba(29, 27, 27, 0.3647058824);
-}
-.pie li {
-  list-style-type: none;
-}
-.pie .pie-contenedor {
-  width: 80%;
-  height: 175px;
-  display: grid;
-  grid-template-columns: 2fr 3.5fr 2fr;
-  grid-template-rows: 30px 1fr;
-  grid-template-areas: "tiac tisuc tiredes" "ac suc redes";
-  gap: 0 60px;
-  padding: 0;
-  font-weight: 100;
-  font-size: 1rem;
-}
-.pie .pie-contenedor nav ul {
-  padding: 0px;
-}
-.pie .pie-contenedor nav ul a {
-  color: #9b9b90;
-}
-.pie .pie-contenedor nav ul a:hover {
-  color: white;
-}
-.pie .pie-contenedor .grid-titulo-acceso {
-  grid-area: tiac;
-  display: flex;
-  justify-content: start;
-  color: red;
-  border-bottom: 1px solid gold;
-}
-.pie .pie-contenedor .accesos {
-  grid-area: ac;
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  padding-top: 15px;
-}
-.pie .pie-contenedor .grid-titulo-sucursales {
-  grid-area: tisuc;
-  display: flex;
-  justify-content: start;
-  color: red;
-  border-bottom: 1px solid gold;
-}
-.pie .pie-contenedor .sucursales {
-  grid-area: suc;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  padding-top: 15px;
-}
-.pie .pie-contenedor .grid-titulo-redes {
-  grid-area: tiredes;
-  display: flex;
-  justify-content: left;
-  align-items: start;
-  color: red;
-  border-bottom: 1px solid gold;
-}
-.pie .pie-contenedor .redes {
-  grid-area: redes;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  padding-top: 15px;
-}
-
 .contenedor-menu {
   display: flex;
   flex-direction: column;
@@ -421,6 +421,7 @@ body {
   align-items: center;
   justify-content: center;
   height: auto;
+  margin: 35px;
 }
 .seccion-sucursal .seccion-sucursal-titulo {
   margin-top: 25px;
@@ -432,7 +433,7 @@ body {
   color: white;
 }
 .seccion-sucursal .contenedor-sucursal {
-  width: 80%;
+  width: 90%;
   height: auto;
   display: grid;
   padding: 20px;
@@ -454,14 +455,14 @@ body {
 }
 .seccion-sucursal .contenedor-sucursal .sucursal-uno-titulo {
   grid-area: suctit;
-  background-color: red;
+  background-color: gold;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .seccion-sucursal .contenedor-sucursal .sucursal-uno-direccion {
   grid-area: sucdir;
-  background-color: red;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -598,10 +599,10 @@ body {
   width: 100%;
 }
 
-@media (width <= 1325px) {
+@media (width <= 1050px) {
   .encabezado-contenedor .menu .menu-lista {
     margin-top: 5px;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -619,16 +620,11 @@ body {
     border-radius: 30px;
   }
 }
-@media (width <= 1150px) {
-  .index-encabezado .encabezado-contenedor .menu .menu-lista {
-    gap: 10px;
-  }
-}
 @media (width <= 900px) {
   .index-encabezado .encabezado-contenedor .menu .menu-lista {
     padding: 0;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 20px;
   }
   .seccion-carrousel .carousel-item img {
     object-fit: cover;

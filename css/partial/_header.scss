@@ -9,16 +9,30 @@
     .encabezado-contenedor{
         width: 100%;
         height: auto;
-        padding: 20px 5% 20px 5%;
+        padding: 0 5%;
         background-color: #050609;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: self-start;
+
+        .boton-oculto{
+            display: none;
+        }
 
         .marca{
             display: flex;
             justify-content: center;
             align-items: center;
+
+            .titulo{
+                font-family: 'Lemon', serif;
+                color: $color-terciario;
+                text-decoration: none;
+            }
+
+            .subtitulo{
+                color: white;
+            }
 
             img{
                 width: 80px;
@@ -45,6 +59,7 @@
             font-size: 1.25rem;
             &:hover{
                 color: gold;
+                text-decoration: underline;
             }
         }
 
@@ -67,6 +82,27 @@
             }
         }
 
+        .menu-hamburger{
+            display: flex;
+            padding-top: 10px;
+            justify-content: left;
+            align-items: left;
+
+            .menu-lista-hamburger{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: left;
+                padding: 20px;
+                gap: 10px;
+                color: black;
+                
+                a{
+                    font-style: italic;
+                    color:black;
+                }
+            }
+        }
         li{
             list-style-type: none;            
         }

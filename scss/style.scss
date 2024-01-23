@@ -255,9 +255,16 @@ body {
               
               .carde__description {
                 margin: 10px 0 0;
-                font-size: 14px;
+                font-size: 18px;
                 color: #777;
                 line-height: 1.4;
+
+                a{
+                    color: red;
+                    font-weight: 800;
+                    text-decoration: underline;
+                    font-size: 1.25rem;
+                }
               }
           }
         }          
@@ -503,6 +510,19 @@ body {
             height: 100%;
         }
 
+    }
+}
+
+// PAGINA HAMBURGUESA VEGANA
+.seccion-hamburguesa{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contenedor-hamburguesa{
+        width: 1300px;
     }
 }
 

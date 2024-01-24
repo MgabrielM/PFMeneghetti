@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-$color-primario: #050609;
-$color-secundario: red;
-$color-terciario: gold;
-
+@import "../css/partial/variables";
+@import "../css/partial/maps";
 @import "../css/partial/generales";
 @import "../css/partial/header";
 @import "../css/partial/pie";
@@ -15,7 +13,7 @@ body {
   }
   
 .seccion-carrousel{
-    width: 100vw;
+    width: map-get($ancho, ancho);
     height: 55vh;
 
     .carousel-item{
@@ -319,9 +317,9 @@ body {
 .conte {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: map-get($ancho, dis);
+    justify-content: map-get($ancho, jus);
+    align-items: map-get($ancho, ali);
     background: #121212;
     background: linear-gradient(
       135deg,

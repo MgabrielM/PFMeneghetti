@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-
 @import "../css/partial/variables";
 @import "../css/partial/maps";
 @import "../css/partial/generales";
@@ -94,7 +93,7 @@ body {
             position: relative;
             width: 90%;
             height: 200px;
-            background: linear-gradient(45deg, #272121f8 45%,  #5fff03 100% );
+            background: linear-gradient(45deg, #272121f8 45%,  #efff0b 100% );
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -345,13 +344,13 @@ body {
     }
   }
 
-
+  
 .seccion-hamburguesa{
     width: 100%;
     height: 100%;
     padding-top: 45px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;    
 
@@ -381,8 +380,7 @@ body {
                 &:hover{
                     color: #050609;
                 }
-    
-            }   
+            } 
         }  
 
         .detalle-vegano{
@@ -397,8 +395,25 @@ body {
                 color: #050609;
                 background-color: gold;
             }
-        }             
+        }
     }    
+
+    .hamburguesa-video{
+        width: 90%;
+        height: 800px;
+        max-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 45px;
+
+        .video-hv{
+            width: 100%;
+            height: 90%;
+            border-radius: 25px;
+        }
+    }
 }
 
 // PAGINA CONTACTO

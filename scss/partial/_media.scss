@@ -1,0 +1,231 @@
+
+@media (width<=1050px){
+    .encabezado-contenedor{
+        .menu{
+            .menu-lista{
+                margin-top:5px;
+                gap:20px;
+                justify-content: center;
+                align-items: center;
+                padding:0;
+
+                a{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .index-seccion-uno{    
+        .index-seccion-uno-contenedor{
+            flex-direction: column;
+            
+            &>div{
+                justify-content: space-around;
+                align-items: center;
+                width: 90%;
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+@media (width<=900px){
+    .index-encabezado{
+
+        .encabezado-contenedor{
+            .menu{
+                .menu-lista{
+                    padding: 0;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+
+    .seccion-carrousel{
+    
+        .carousel-item{
+            img{
+                object-fit: cover;
+                object-position: 50% 50%;
+                opacity: 0.9;
+            }
+        } 
+    }
+    
+}
+
+@media (max-width: 900px){
+    .menu{
+        display:none !important;
+    }
+    
+    .index-encabezado{
+        .marca{
+            h1>a{
+                font-size: 1rem;
+            }
+        }
+        .boton-oculto{
+            display: block !important;
+            margin-top: 20px;
+            width: 100px;
+            height: 45px;
+            background-color: red;
+        }
+
+        .encabezado-contenedor{
+            .offcanvas-body>a{
+                color:black;
+            }
+        }
+    }
+
+    .seccion-contacto{
+        .contacto-contenedor{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr 1fr;
+            grid-template-areas:
+            "nom"
+            "ape"
+            "correo"
+            "tel"
+            "asu"
+            "tex"
+            "bot";
+            height: 650px;
+        }
+    }
+
+    .seccion-sucursal{
+        .contenedor-sucursal{
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.25fr 0.25fr 1fr 1fr;
+            grid-template-areas: 
+            "suctit"
+            "sucdir"
+            "suc"
+            "sucmap";
+            row-gap: 10px;
+        }
+    }
+}
+
+@media (width<=800px){
+
+    .contenedor-menu-primario{
+        .hamburguesa{
+            padding: 25px;
+            flex-direction: column;
+            justify-content: first baseline;
+            align-items: center;
+        }
+    }
+
+    .index-seccion-dos{
+        .index-seccion-dos-contenedor{
+            height: 50vh;
+        }
+
+        img{
+            display: none !important;
+        }
+    }
+    
+
+    .pie{
+        height: auto;
+        .pie-contenedor{
+            width: 90%;
+            height: auto;
+            grid-template-columns: 1fr;
+            grid-template-rows: 30px 1fr 30px 1fr 30px 1fr;
+            grid-template-areas: 
+            "tiac"
+            "ac"
+            "tisuc"
+            "suc"
+            "tiredes"
+            "redes";
+
+            .grid-titulo-acceso{
+                justify-content: center;
+                align-items: center;
+            }
+            .accesos{
+                justify-content: center;
+                margin-bottom: 25px;
+            }
+            .grid-titulo-sucursales{
+                justify-content: center;
+            }
+            .sucursales{
+                justify-content: space-around;
+                margin-bottom: 25px;
+
+                nav{
+                    width: 100%;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }            
+            .grid-titulo-redes{
+                justify-content: center;
+            }
+            .redes{
+                justify-content: center;
+
+                nav{
+                    width: 100%;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .hamburguesa-detalle>img{
+        width:100%;
+    }
+    .detalle-vegano{
+        display: none !important;
+    }
+}
+
+
+@media (width<=800px){    
+    .index-seccion-uno{
+        .index-seccion-uno-contenedor{
+            .uno{
+                flex-direction: column; 
+                justify-content: space-around;
+                height: 250px;
+                padding: 0 20px;      
+            }
+            .dos{
+                flex-direction: column;
+                height: 250px;
+                padding: 25px 25px;
+            }
+            .tres{
+                flex-direction: column;
+                height: 250px;
+                padding: 0 50px;
+            }
+        }
+    }
+
+    .index-seccion-dos {
+        height: 25vh;
+    }
+}

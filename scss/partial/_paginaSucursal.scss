@@ -1,0 +1,66 @@
+// PAGINA SUCURSAL
+.seccion-sucursal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 35px;
+
+    .seccion-sucursal-titulo{
+        margin-top: 25px;
+        width: 70%;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        align-items: start;
+        color: white;
+    }
+
+    .contenedor-sucursal{
+        width: 90%;
+        height: auto;
+        display: grid;
+        padding: 20px;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr 1fr 6fr;
+        grid-template-areas: 
+        "suc suctit"
+        "suc sucdir"
+        "suc sucmap";
+        column-gap: 30px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 950px;
+            max-height: 400px;
+            display: block;
+            object-fit: fill;
+        }
+
+        .sucursal-uno{
+            grid-area: suc;
+        }
+        .sucursal-uno-titulo{
+            grid-area: suctit;
+            background-color: gold;     
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+        .sucursal-uno-direccion{
+            grid-area: sucdir;
+            background-color: white; 
+            display: flex;
+            justify-content: center;
+            align-items: center;         
+        }
+        .sucursal-uno-mapa{
+            grid-area: sucmap;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+}

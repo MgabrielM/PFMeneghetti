@@ -1,0 +1,67 @@
+// PAGINA CONTACTO
+.seccion-contacto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 55px;
+
+    .contacto-contenedor{
+        width: 90%;
+        height: 550px;
+        margin-top: 25px;
+        row-gap: 22px;
+        column-gap: 22px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "nom ape"
+        "correo tel"
+        "asu asu"
+        "tex tex"
+        "bot bot";
+
+        .campo-nombre{
+            grid-area: nom;
+        }
+        .campo-apellido{
+            grid-area: ape;
+        }
+        .campo-correo{
+            grid-area: correo;
+        }
+        .campo-telefono{
+            grid-area: tel;
+        }
+        .campo-asunto{
+            grid-area: asu;
+        }
+        .campo-texto{
+            grid-area: tex;
+        }
+        .campo-boton{
+            grid-area: bot;
+        }
+
+        .centrar{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
+        }
+
+        div>label{
+            width: 100%;
+        }
+        div>input{
+            width: 100%;
+        }
+        div>textarea{
+            width: 100%;
+        }
+    }
+}

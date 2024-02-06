@@ -1,0 +1,172 @@
+.seccion-carrousel{
+        width: map-get($ancho, ancho);
+    height: 55vh;
+
+    .carousel-item{
+        img{
+            margin:0;
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            object-position: 50% 50%;
+            opacity: 0.9;
+        }
+    } 
+}
+
+.index-seccion-uno{
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    background-color: $color-primario;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .index-seccion-uno-contenedor{
+        width: 1300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+        color: white;
+        
+        &>div{
+            width: 30%;
+            height: 200px;            
+            background-color: #1d1b1bde;
+            border-radius: 5%;
+            padding: 15px 15px;
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .uno{
+            img{
+                width: 150px;
+                height: 150px;               
+                object-fit: contain;
+                object-position: block;
+                object-fit: cover;
+            }
+        }
+
+        .dos{
+            img{
+                width: 150px;
+                height: 150px;               
+                object-fit: contain;
+                object-position: block;
+                object-fit: cover;
+                padding-bottom: 15px;
+        }}
+
+        .tres{
+            img{
+                width: 200px;
+                height: 200px;               
+                object-fit: contain;
+                object-position: block;
+                object-fit: cover;
+                padding-top: 10px;
+            }
+        }
+
+        .carde {
+            position: relative;
+            width: 90%;
+            height: 200px;
+            background: linear-gradient(45deg, #272121f8 45%,  #efff0b 100% );
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+          
+            &:hover {
+                transform: rotate(-5deg) scale(1.1);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+                .carde__content {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                    opacity: 1;
+                  }
+
+                svg {
+                scale: 0;
+                transform: rotate(-45deg);
+                }
+
+              }
+
+          svg {
+            width: 48px;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+          }
+
+          .carde__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 100%;
+            height: 100%;
+            padding: 35px;
+            box-sizing: border-box;
+            background-color: white;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+
+            .carde__title {
+                margin: 0;
+                font-size: 24px;
+                color: #333;
+                font-weight: 700;
+              }
+              
+              .carde__description {
+                margin: 10px 0 0;
+                font-size: 18px;
+                color: #777;
+                line-height: 1.4;
+
+                a{
+                    color: red;
+                    font-weight: 800;
+                    text-decoration: underline;
+                    font-size: 1.25rem;
+                }
+              }
+          }
+        }          
+    }
+}
+
+.index-seccion-dos{
+    background-color: $color-primario;
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 15vw;    
+
+    .index-seccion-dos-contenedor{
+        display:flex;
+        width: 1300px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        
+        img{
+            width: 90%;
+            height: auto;
+        }        
+    }
+}

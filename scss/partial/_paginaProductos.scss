@@ -1,0 +1,60 @@
+// PAGINA PRODUCTOS
+.contenedor-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 35px;
+
+    .menu-titulo{
+        font-size: 3rem;
+        padding: 35px 0;
+     }
+
+    .titulo-hamburguesa{
+        color: $color-terciario;
+    }
+
+    .titulo-papas{
+        color: $color-secundario;
+    }
+    
+    .contenedor-menu-primario{
+        width: 1300px;
+        max-width: 85%;
+        min-width: 325px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;        
+
+        .hamburguesa{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #9b9b9011;
+            padding: 45px;
+            gap: 40px;
+            border-radius: 25px;
+
+            img{
+                width: 150px;
+                height: 150px;
+                object-fit: contain;
+                background-color: rgb(247, 248, 244);
+                border-radius: 50%;
+            }
+
+            &>div>h2{
+                color: red;
+            }
+            &>div>div{
+                color: #9b9b90;
+            }
+            
+        }
+    }  
+}

@@ -1,0 +1,103 @@
+// PAGINA HAMBURGUESA VEGANA
+.conte {
+    width: 100%;
+    height: 100%;
+    display: map-get($ancho, dis);
+    justify-content: map-get($ancho, jus);
+    align-items: map-get($ancho, ali);
+    background: #121212;
+    background: linear-gradient(
+      135deg,
+      #121212 25%,
+      #bdb107 25%,
+      #bdb107 50%,
+      #121212 50%,
+      #121212 75%,
+      #bdb107 75%,
+      #bdb107
+    );
+    border-radius: 25px;
+    background-size: 40px 40px;
+    animation: move 4s linear infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+
+  
+.seccion-hamburguesa{
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+
+    .contenedor-hamburguesa{
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 45px;
+
+        .titulo-hamburguesa{
+            background-color: #050609;
+            border-radius: 25px;
+            padding: 25px;
+
+            &:hover{
+                background-color: gold;
+                color: #050609;
+            }
+
+            .titulo-vegano{
+                font-size: 3rem;
+                color: gold;
+
+                &:hover{
+                    color: #050609;
+                }
+            } 
+        }  
+
+        .detalle-vegano{
+            background-color: #050609;
+            border-radius: 25px;
+            padding: 25px;
+            font-size: 3rem;
+            color: gold;
+            text-align: center;
+
+            &:hover{
+                color: #050609;
+                background-color: gold;
+            }
+        }
+    }    
+
+    .hamburguesa-video{
+        width: 90%;
+        height: 800px;
+        max-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 45px;
+
+        .video-hv{
+            width: 100%;
+            height: 90%;
+            border-radius: 25px;
+        }
+    }
+}

@@ -9,14 +9,20 @@
 body {
   background-color: #050609;
   font-family: "Lemon", serif;
+  background-color: #050609;
+  font-family: "Oswald", sans-serif;
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.6rem;
 }
 
 a {
@@ -130,98 +136,13 @@ h3 {
   list-style-type: none;
 }
 
-.pie {
-  width: 100vw;
-  height: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  margin-top: 25px;
-  background-color: rgba(29, 27, 27, 0.3647058824);
-}
-.pie li {
-  list-style-type: none;
-}
-.pie .pie-contenedor {
-  width: 80%;
-  height: 175px;
-  display: grid;
-  grid-template-columns: 2fr 3.5fr 2fr;
-  grid-template-rows: 30px 1fr;
-  grid-template-areas: "tiac tisuc tiredes" "ac suc redes";
-  gap: 0 60px;
-  padding: 0;
-  font-weight: 100;
-  font-size: 1rem;
-}
-.pie .pie-contenedor nav ul {
-  padding: 0px;
-}
-.pie .pie-contenedor nav ul a {
-  color: #9b9b90;
-}
-.pie .pie-contenedor nav ul a:hover {
-  color: white;
-}
-.pie .pie-contenedor .grid-titulo-acceso {
-  grid-area: tiac;
-  display: flex;
-  justify-content: start;
-  color: red;
-  border-bottom: 1px solid gold;
-}
-.pie .pie-contenedor .accesos {
-  grid-area: ac;
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  padding-top: 15px;
-}
-.pie .pie-contenedor .grid-titulo-sucursales {
-  grid-area: tisuc;
-  display: flex;
-  justify-content: start;
-  color: red;
-  border-bottom: 1px solid gold;
-}
-.pie .pie-contenedor .sucursales {
-  grid-area: suc;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  padding-top: 15px;
-}
-.pie .pie-contenedor .grid-titulo-redes {
-  grid-area: tiredes;
-  display: flex;
-  justify-content: left;
-  align-items: start;
-  color: red;
-  border-bottom: 1px solid gold;
-}
-.pie .pie-contenedor .redes {
-  grid-area: redes;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  padding-top: 15px;
-}
-
-body {
-  background-color: #050609;
-  font-family: "Oswald", sans-serif;
-}
-
 .seccion-carrousel {
   width: 100%;
   height: 55vh;
 }
 .seccion-carrousel .carousel-item img {
   margin: 0;
-  width: 100vw;
+  width: 100%;
   height: 50vh;
   object-fit: cover;
   object-position: 50% 50%;
@@ -344,7 +265,7 @@ body {
 
 .index-seccion-dos {
   background-color: #050609;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -612,6 +533,86 @@ body {
 }
 .seccion-contacto .contacto-contenedor div > textarea {
   width: 100%;
+}
+
+.pie {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  margin-top: 25px;
+  background-color: rgba(29, 27, 27, 0.3647058824);
+}
+.pie li {
+  list-style-type: none;
+}
+.pie .pie-contenedor {
+  width: 90%;
+  height: 175px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas: "tiac tisuc tiredes" "ac suc redes";
+  gap: 0 60px;
+  padding: 0;
+  font-weight: 100;
+  font-size: 1rem;
+}
+.pie .pie-contenedor nav ul {
+  padding: 0px;
+}
+.pie .pie-contenedor nav ul a {
+  color: #9b9b90;
+}
+.pie .pie-contenedor nav ul a:hover {
+  color: white;
+}
+.pie .pie-contenedor .grid-titulo-acceso {
+  grid-area: tiac;
+  display: flex;
+  justify-content: start;
+  color: red;
+  border-bottom: 1px solid gold;
+}
+.pie .pie-contenedor .accesos {
+  grid-area: ac;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding-top: 15px;
+}
+.pie .pie-contenedor .grid-titulo-sucursales {
+  grid-area: tisuc;
+  display: flex;
+  justify-content: start;
+  color: red;
+  border-bottom: 1px solid gold;
+}
+.pie .pie-contenedor .sucursales {
+  grid-area: suc;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 15px;
+}
+.pie .pie-contenedor .grid-titulo-redes {
+  grid-area: tiredes;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  color: red;
+  border-bottom: 1px solid gold;
+}
+.pie .pie-contenedor .redes {
+  grid-area: redes;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 15px;
 }
 
 @media (width <= 1050px) {
